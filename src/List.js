@@ -3,6 +3,9 @@ import Card from './Card';
 import './List.css';
 
 class List extends React.Component {
+    static defaultProps = {
+        cards: [{ id: 'a', title: 'First card', content: 'lorem ipsum' }]
+      };
     render() {
         const arrayOfCards = this.props.cards.map((elem, i) => {
             return <Card key={i} title={elem.title} content={elem.content} />
